@@ -1,0 +1,42 @@
+name: Actualizar Ranking
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # corre en punto, cada hora
+  workflow_dispatch:        # también podés dispararlo manual desde la pestaña Actions
+
+permissions:
+  contents: write            # necesario para que el token automático pueda commitear
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repo
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar dependencias
+        working-directory: scripts
+        run: npm install
+
+      - name: Ejecutar script de actualización
+        working-directory: scripts
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: node actualizar-ranking.js
+
+      - name: Mover ranking.json a la raíz del repo
+        run: mv scripts/ranking.json ranking.json
+
+      - name: Commitear y pushear cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ranking.json
+          git diff --staged --quiet || git commit -m "Actualización automática del ranking"
+          git push
