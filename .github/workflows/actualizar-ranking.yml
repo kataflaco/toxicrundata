@@ -40,3 +40,6 @@ jobs:
           git add ranking.json
           git diff --staged --quiet || git commit -m "Actualización automática del ranking"
           git push
+                                                                                                        
+                                                                                                        
+                                                                                                        
