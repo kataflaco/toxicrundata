@@ -1,1 +1,15 @@
-{"timestampGlobal":"2026-09-17T07:22:00.5868005Z","jugadores":[{"name":"FranKIIINNGGG","maxLevel":25,"id":"FJtY1VOFoSTt8hycAVQ1bfBqKAJ3"},{"name":"FranKIIINNGGG","maxLevel":5,"id":"p6xEijr30yVV6Mgr1mnalhLfTBJ2"}]}
+{
+  "timestampGlobal": "2026-09-18T04:48:57.252Z",
+  "jugadores": [
+    {
+      "name": "FranKIIINNGGG",
+      "maxLevel": 26,
+      "id": "FJtY1VOFoSTt8hycAVQ1bfBqKAJ3"
+    },
+    {
+      "name": "FranKIIINNGGG",
+      "maxLevel": 6,
+      "id": "p6xEijr30yVV6Mgr1mnalhLfTBJ2"
+    }
+  ]
+}
