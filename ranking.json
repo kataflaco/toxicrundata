@@ -1,10 +1,15 @@
 {
-  "timestampGlobal": "2026-09-20T04:01:13.442Z",
+  "timestampGlobal": "2026-09-20T05:01:18.978Z",
   "jugadores": [
     {
       "name": "FranKIIINNGGG",
-      "maxLevel": 0,
+      "maxLevel": 6,
       "id": "c40c983d-df36-4bfd-8f0d-8e7c59ab1bf1"
+    },
+    {
+      "name": "FranKIIINNGGG",
+      "maxLevel": 1,
+      "id": "9be7c48d-0034-4a48-b764-797b7c40ff5a"
     }
   ]
 }
