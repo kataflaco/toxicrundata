@@ -24,8 +24,7 @@ jobs:
 
       - name: Ejecutar script de actualización
         working-directory: scripts
-        env:
-          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        
         run: node actualizar-ranking.js
 
       - name: Mover ranking.json a la raíz del repo
