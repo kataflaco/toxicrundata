@@ -1,33 +1,33 @@
-const admin = require("firebase-admin");
 const fs = require("fs");
 
-// Lee la credencial desde la variable de entorno (inyectada por el workflow)
-const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
-
-const db = admin.firestore();
+// 🔑 Credenciales de Supabase (misma publishable key que usás en Unity)
+const SUPABASE_URL = "https://atkreaarnqsuzdcaxxry.supabase.co";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF0a3JlYWFybnFzdXpkY2F4eHJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4MzQ0NjMsImV4cCI6MjEwNTQxMDQ2M30.O2zZYa1iggJF4UvbzupruSU9fBeRMEpiOlPaZcYMFU0";
 
 async function actualizarRanking() {
-  console.log("Consultando Firestore - colección 'rankings'...");
+  console.log("Consultando Supabase - tabla 'jugadores'...");
 
-  const snapshot = await db
-    .collection("rankings")
-    .orderBy("maxLevel", "desc")
-    .limit(100)
-    .get();
+  const url = `${SUPABASE_URL}/rest/v1/jugadores?select=uid,nombre,nivel_maximo&order=nivel_maximo.desc&limit=100`;
 
-  const jugadores = [];
-  snapshot.forEach((doc) => {
-    const data = doc.data();
-    jugadores.push({
-      name: data.name || "Piloto_Toxic",
-      maxLevel: data.maxLevel || 1,
-      id: doc.id,
-    });
+  const res = await fetch(url, {
+    headers: {
+      apikey: SUPABASE_KEY,
+      Authorization: `Bearer ${SUPABASE_KEY}`,
+    },
   });
+
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Supabase respondió ${res.status}: ${body}`);
+  }
+
+  const filas = await res.json();
+
+  const jugadores = filas.map((fila) => ({
+    name: fila.nombre || "Piloto_Toxic",
+    maxLevel: fila.nivel_maximo || 0,
+    id: fila.uid,
+  }));
 
   const archivoRanking = {
     timestampGlobal: new Date().toISOString(),
