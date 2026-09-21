@@ -1,15 +1,15 @@
 {
-  "timestampGlobal": "2026-09-21T05:01:20.128Z",
+  "timestampGlobal": "2026-09-21T06:01:16.074Z",
   "jugadores": [
+    {
+      "name": "asdsadas",
+      "maxLevel": 0,
+      "id": "50ceebf0-d3ad-4291-b0d6-62276e3e554e"
+    },
     {
       "name": "asdasd",
       "maxLevel": 0,
       "id": "c40c983d-df36-4bfd-8f0d-8e7c59ab1bf1"
-    },
-    {
-      "name": "Piloto_Toxic",
-      "maxLevel": 0,
-      "id": "7ba89d0e-40b3-4f4c-b066-8d58b2c76795"
     }
   ]
 }
