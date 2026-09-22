@@ -1,15 +1,15 @@
 {
-  "timestampGlobal": "2026-09-22T04:01:17.254Z",
+  "timestampGlobal": "2026-09-22T05:01:23.242Z",
   "jugadores": [
     {
-      "name": "asdasd",
-      "maxLevel": 1,
-      "id": "c40c983d-df36-4bfd-8f0d-8e7c59ab1bf1"
+      "name": "fffffffffffffff",
+      "maxLevel": 2,
+      "id": "9af69001-f65c-4322-a9af-aaa5ec928289"
     },
     {
-      "name": "fffffffffffffff",
-      "maxLevel": 1,
-      "id": "9af69001-f65c-4322-a9af-aaa5ec928289"
+      "name": "asdasd",
+      "maxLevel": 0,
+      "id": "c40c983d-df36-4bfd-8f0d-8e7c59ab1bf1"
     }
   ]
 }
