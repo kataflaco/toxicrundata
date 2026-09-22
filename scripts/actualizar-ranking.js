@@ -33,7 +33,7 @@ async function actualizarRanking() {
   // 2️⃣ Consultar SOLO los jugadores de la temporada actual
   console.log("Consultando Supabase - tabla 'jugadores'...");
 
-  const url = `${SUPABASE_URL}/rest/v1/jugadores?select=uid,nombre,nivel_maximo,temporada_actual&temporada_actual=eq.${temporadaActual}&order=nivel_maximo.desc&limit=100`;
+  const url = `${SUPABASE_URL}/rest/v1/jugadores?select=uid,nombre,nivel_maximo,temporada_actual&temporada_actual=eq.${temporadaActual}&nivel_maximo=gt.0&order=nivel_maximo.desc&limit=100`;
 
   const res = await fetch(url, {
     headers: {
