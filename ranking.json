@@ -1,5 +1,11 @@
 {
-  "timestampGlobal": "2026-09-24T03:01:14.429Z",
+  "timestampGlobal": "2026-09-24T04:01:15.552Z",
   "temporada": 0,
-  "jugadores": []
+  "jugadores": [
+    {
+      "name": "fffffffffffffff",
+      "maxLevel": 49,
+      "id": "9af69001-f65c-4322-a9af-aaa5ec928289"
+    }
+  ]
 }
