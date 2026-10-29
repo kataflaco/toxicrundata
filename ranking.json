@@ -1,16 +1,16 @@
 {
-  "timestampGlobal": "2026-10-29T00:01:28.787Z",
+  "timestampGlobal": "2026-10-29T01:01:21.891Z",
   "temporada": 0,
   "jugadores": [
-    {
-      "name": "FranKinGG",
-      "maxLevel": 100,
-      "id": "9af69001-f65c-4322-a9af-aaa5ec928289"
-    },
     {
       "name": "GodFred04",
       "maxLevel": 77,
       "id": "06cf4b75-bcfe-4ba4-9164-c638903ec0e0"
+    },
+    {
+      "name": "FranKinGG",
+      "maxLevel": 50,
+      "id": "9af69001-f65c-4322-a9af-aaa5ec928289"
     },
     {
       "name": "LuiG",
