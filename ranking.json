@@ -1,11 +1,16 @@
 {
-  "timestampGlobal": "2026-11-02T21:01:25.001Z",
+  "timestampGlobal": "2026-11-02T22:01:23.108Z",
   "temporada": 0,
   "jugadores": [
     {
       "name": "FranKinGG",
-      "maxLevel": 9,
+      "maxLevel": 10,
       "id": "9af69001-f65c-4322-a9af-aaa5ec928289"
+    },
+    {
+      "name": "maxxx",
+      "maxLevel": 7,
+      "id": "c40c983d-df36-4bfd-8f0d-8e7c59ab1bf1"
     }
   ]
 }
